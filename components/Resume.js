@@ -1,10 +1,10 @@
 import projects from "./projects";
 
-export default function Resume() {
+export default function Resume({ targetRef }) {
   const projectList = projects.map((project) => (
     <div key={project.id}>
       <div className="project text-sm">
-        <div className="font-bold flex justify-between">
+        <div className="font-bold   flex justify-between">
           <a href={project.href} target="_blank">
             {project.name}
           </a>
@@ -21,7 +21,7 @@ export default function Resume() {
   ));
 
   return (
-    <div className="border border-black w-[50%] p-6">
+    <div className="border border-black w-[50%] p-6" ref={targetRef}>
       <h1 className="text-2xl font-bold uppercase">Sumedha Singh Rathor</h1>
       <div className="flex justify-between text-sm">
         <p>
